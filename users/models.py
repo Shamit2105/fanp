@@ -3,16 +3,16 @@ from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
     questions = [
-        ('What is your favorite color?','color'),
-        ('What is your favorite animal?','animal'),
-        ('What is your favorite food?','food'),
-        ('What is your favorite movie?','movie'),
-        ('What is your favorite book?','book'),
-        ('What is your favorite song?','song'),
-        ('What is your favorite TV show?','tv_show'),
-        ('What is your favorite video game?','video_game'),
-        ('What is your favorite sport?','sport'),
-        ('What is your favorite hobby?','hobby'),
+        ('color', 'What is your favorite color?'),
+        ('animal', 'What is your favorite animal?'),
+        ('food', 'What is your favorite food?'),
+        ('movie', 'What is your favorite movie?'),
+        ('book', 'What is your favorite book?'),
+        ('song', 'What is your favorite song?'),
+        ('tv_show', 'What is your favorite TV show?'),
+        ('video_game', 'What is your favorite video game?'),
+        ('sport', 'What is your favorite sport?'),
+        ('hobby', 'What is your favorite hobby?'),
     ]
     sec_questions = models.CharField(max_length=100, choices=questions, default='color')
     sec_answer = models.CharField(max_length=100)
